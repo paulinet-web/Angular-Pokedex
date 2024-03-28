@@ -1,0 +1,11 @@
+
+<div *ngIf="pokemon">
+    <h2>{{ pokemon.name }}</h2>
+    <img [src]="pokemon.image" alt="Pokemon Image">
+    <p><b>Ability</b>: {{ pokemon.ability }}</p>
+    <p><b>Weight</b>: {{ pokemon.weight }} kg</p>
+  </div>
+  <div *ngIf="!pokemon">
+    Loading Pokemon...
+</div>
+
