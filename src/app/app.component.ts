@@ -10,8 +10,8 @@ import { NgFor } from '@angular/common';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-providers: [FetcherService],
-imports: [HttpClientModule, PokemonCardComponent, NgFor]})
+  providers: [FetcherService],
+  imports: [HttpClientModule, PokemonCardComponent, NgFor]})
 
 export class AppComponent {
    title = "Pokedex"

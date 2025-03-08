@@ -1,7 +1,7 @@
 
 <div *ngIf="pokemon">
     <h2>{{ pokemon.name }}</h2>
-    <img [src]="pokemon.image" alt="Pokemon Image">
+    <img src="{{pokemon.image}}" alt="{{pokemon.name}} image">
     <p><b>Ability</b>: {{ pokemon.ability }}</p>
     <p><b>Weight</b>: {{ pokemon.weight }} kg</p>
   </div>
