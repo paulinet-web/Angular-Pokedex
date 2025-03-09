@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { FetcherService } from '../fetcher.service';
+import {Component, inject, Input} from '@angular/core';
+import { FetcherService } from '../services/fetcher.service';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -20,9 +20,7 @@ type Pokemon = {
 export class PokemonCardComponent {
   @Input() id: string | undefined;
    pokemon: Pokemon | undefined;
-
-   constructor(private fetcherService: FetcherService) { 
-   }
+   private readonly fetcherService = inject(FetcherService);
 
    convertPoundToKg(weightInPound: number): number{
     return Math.round(weightInPound*0.453592)

@@ -1,21 +1,13 @@
 import { Component } from '@angular/core';
-import { FetcherService } from './fetcher.service';
-import { HttpClientModule } from '@angular/common/http';
-import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
-import { NgFor } from '@angular/common';
-
+import {RouterOutlet} from "@angular/router";
 
 @Component({
-  standalone: true,
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  providers: [FetcherService],
-  imports: [HttpClientModule, PokemonCardComponent, NgFor]})
-
+  styleUrl: './app.component.css'
+})
 export class AppComponent {
-   title = "Pokedex"
-   pokemonIds = ["1", "3", "5", "7", "500"]
-  constructor( private fetcherService: FetcherService){
-  }
+
 }
