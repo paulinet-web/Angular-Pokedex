@@ -1,0 +1,11 @@
+.outer-div {
+  background-color: black;
+  height: 100px;
+  width:  100px;
+}
+
+.inner-div {
+  background-color: gold;
+  height: 1rem;
+  width:  100px;
+}
